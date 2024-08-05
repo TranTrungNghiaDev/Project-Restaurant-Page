@@ -23,6 +23,10 @@ button {
     background-color: #ff782e;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 header {
     border-bottom: 1px solid black;
     background-image: url(./imgs/background-header.jpg);

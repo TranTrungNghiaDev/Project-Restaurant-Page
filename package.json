@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "git subtree push --prefix dist origin gh-pages",
+    "deploy": "gh-pages -d dist",
     "watch": "webpack --watch",
     "build": "webpack"
   },
@@ -18,9 +18,10 @@
   "bugs": {
     "url": "https://github.com/TranTrungNghiaDev/Project-Restaurant-Page/issues"
   },
-  "homepage": "https://github.com/TranTrungNghiaDev/Project-Restaurant-Page#readme",
+  "homepage": "https://trantrungnghiadev.github.io/Project-Restaurant-Page",
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.93.0",
