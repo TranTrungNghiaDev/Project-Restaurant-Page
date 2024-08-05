@@ -1,49 +1,37 @@
+import { createTitleContent } from "../common";
+
 function createMenuPage() {
-    const contentDiv = document.querySelector("#content");
-
+    createTitleContent("Menu");
     // First Food
-    const firstFoodSection = document.createElement("section");
-    const firstFoodImage = document.createElement("img");
-    firstFoodImage.src = "../src/menu/imgs/com-tam-dui-ga-nuong-toi.jpg";
-    firstFoodImage.alt = "Cơm tấm đùi gà nướng tỏi";
-    firstFoodSection.appendChild(firstFoodImage);
-    const firstFoodTitle = document.createElement("h2");
-    firstFoodTitle.textContent = "Cơm tấm đùi gà nướng tỏi";
-    firstFoodSection.appendChild(firstFoodTitle);
-    contentDiv.appendChild(firstFoodSection);
-
+    createFoodSection("Oyakodon", "Full of flavor and protein, this is one of the most beloved Japanese rice bowls. It is made by topping steamed white rice with a rich and savory chicken, egg, and green onion simmered mixture.", "../src/menu/imgs/Oyakodon.jpeg");
+    
     // Second Food
-    const secondFoodSection = document.createElement("section");
-    const secondFoodImage = document.createElement("img");
-    secondFoodImage.src = "../src/menu/imgs/com-bi-cha.jpg";
-    secondFoodImage.alt = "Cơm tấm bì chả";
-    secondFoodSection.appendChild(secondFoodImage);
-    const secondFoodTitle = document.createElement("h2");
-    secondFoodTitle.textContent = "Cơm tấm bì chả";
-    secondFoodSection.appendChild(secondFoodTitle);
-    contentDiv.appendChild(secondFoodSection);
+    createFoodSection("Katsudon", "This is a well-known classic of Japanese cuisine and for good reason! It's an incredibly delicious yet simple dish that starts with a crispy pork cutlet (katsu) served atop white rice. Next, the katsu (pork cutlet) is breaded in panko (Japanese bread crumbs) and deep-fried or baked until it gets crispy outside. The resulting tonkatsu is then simmered in a mix of soy sauce, sugar, sake, and mirin to create the unique sweetness and flavor of katsu don. Topped with pickled ginger, a soft cooked egg, and onions, this is one dish you won't want to miss! ", "../src/menu/imgs/Katsudon.jpeg" )
 
     // Third Food
-    const thirdFoodSection = document.createElement("section");
-    const thirdFoodImage = document.createElement("img");
-    thirdFoodImage.src = "../src/menu/imgs/com-tam-suon-cot-let-nuong.jpg";
-    thirdFoodImage.alt = "Cơm tấm sườn cốt lết nướng";
-    thirdFoodSection.appendChild(thirdFoodImage);
-    const thirdFoodTitle = document.createElement("h2");
-    thirdFoodTitle.textContent = "Cơm tấm sườn cốt lết nướng";
-    thirdFoodSection.appendChild(thirdFoodTitle);
-    contentDiv.appendChild(thirdFoodSection);
+    createFoodSection("Kaisendon","This dish is a seafood lover's dream! It features all the freshest catches of the day, such as squid, shrimp, tuna, salmon, scallops, and other seasonal favorites. These are served atop a bed of steamed Japanese rice, with finely chopped onions and pickles as garnish.", "../src/menu/imgs/Kaisendon.jpeg");
 
     // Fourth Food
-    const fourthFoodSection = document.createElement("section");
-    const fourthFoodImage = document.createElement("img");
-    fourthFoodImage.src = "../src/menu/imgs/com-tam-suon-op-la.jpg";
-    fourthFoodImage.alt = "Cơm tấm sườn ốp la";
-    fourthFoodSection.appendChild(fourthFoodImage);
-    const fourthFoodTitle = document.createElement("h2");
-    fourthFoodTitle.textContent = "Cơm tấm sườn ốp la";
-    fourthFoodSection.appendChild(fourthFoodTitle);
-    contentDiv.appendChild(fourthFoodSection);
+    createFoodSection("Omurice", "Omurice is a much-loved Japanese comfort food, perfect for lunch or dinner. It starts with fried ketchup rice made from chopped vegetables, meat, fish, and other ingredients of your choice.", "../src/menu/imgs/Omurice.jpeg");
+
+}
+
+function createFoodSection(title, description, imgSrc) {
+    const contentDiv = document.querySelector("#content");
+    const foodSection = document.createElement("section");
+    const foodTitle = document.createElement("h2");
+    foodTitle.textContent = title;
+    const foodDescription = document.createElement("p");
+    foodDescription.textContent = description;
+    const foodImage = document.createElement("img");
+    foodImage.src = imgSrc;
+    foodImage.alt = title;
+
+    foodSection.appendChild(foodTitle);
+    foodSection.appendChild(foodDescription);
+    foodSection.appendChild(foodImage);
+
+    contentDiv.appendChild(foodSection);
 }
 
 export {createMenuPage}
