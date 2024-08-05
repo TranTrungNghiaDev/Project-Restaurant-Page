@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "my-font";
+    src: url(./fonts/robot_rebels/Robot\ Rebels.ttf);
+    src: url(./fonts/robot_rebels/Robot\ Rebels.otf);
+}
+
+:root {
+    font-size: 1rem;
+    font-family: 'my-font','Courier New', Courier, monospace;
+}
+
+body {
+    background-image: url(./imgs/background-main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    font-family: inherit;
+    padding: 5px 20px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    background-color: #ff782e;
+}
+
+header {
+    border-bottom: 1px solid black;
+    background-image: url(./imgs/background-header.jpg);
+    padding-top: 20px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#content {
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#content section {
+    border: 1px solid black;
+    color: #ff782e;
+    background-color: snow;
+    border-radius: 10px;
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px 20px;
+}
+
+#content h1 {
+    margin: 0;
+}
+
+#content h2 {
+    margin-top: 10px;
+}

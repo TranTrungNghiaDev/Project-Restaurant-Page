@@ -1,8 +1,12 @@
 function createTitleContent(title) {
     const contentDiv = document.querySelector("#content");
-    const contentDivTitle = document.createElement("h1");
-    contentDivTitle.textContent = title;
-    contentDiv.appendChild(contentDivTitle);
+    const contentSection = document.createElement("section");
+    const contentSectionTitle = document.createElement("h1");
+    
+    contentSectionTitle.textContent = title;
+    contentSection.appendChild(contentSectionTitle);
+
+    contentDiv.appendChild(contentSection);
 }
 
 function clearContentDiv() {

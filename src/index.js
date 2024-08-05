@@ -2,6 +2,7 @@ import { clearContentDiv } from "./common";
 import { createHomePage } from "./home/home";
 import { createMenuPage } from "./menu/menu";
 import { createContactPage } from "./contact/contact";
+import * as styles from "./styles.css";
 
 // Run Home Page when page loaded
 createHomePage();

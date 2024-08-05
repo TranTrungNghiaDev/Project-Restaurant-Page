@@ -10,6 +10,7 @@ function createContactPage() {
 
 function createContactSection(name, position, phoneNumber) {
     const contentDiv = document.querySelector("#content");
+    const contactSection = document.createElement("section");
     const contactName = document.createElement("h2");
     contactName.textContent = name;
     const listInfo = document.createElement("ul");
@@ -24,8 +25,10 @@ function createContactSection(name, position, phoneNumber) {
     listInfo.appendChild(phoneNumberListItem);
     listInfo.appendChild(emailListItem);
     
-    contentDiv.appendChild(contactName);
-    contentDiv.appendChild(listInfo);
+    contactSection.appendChild(contactName);
+    contactSection.appendChild(listInfo);
+
+    contentDiv.appendChild(contactSection);
 }
 
 export {createContactPage}
